@@ -1,5 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 import path from 'path';
+import { mergeConfig } from 'vite';
 
 import tsconfigPaths from 'vite-tsconfig-paths';
 
@@ -15,7 +16,11 @@ const config: StorybookConfig = {
   },
   viteFinal: async (config) => {
     config.plugins?.push(tsconfigPaths());
-    return config;
+    return mergeConfig(config, {
+      resolve: {
+        alias: { '@aspen-ui': path.resolve(__dirname, '../src/main.ts') },
+      },
+    });
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
