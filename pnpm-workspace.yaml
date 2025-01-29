@@ -1,3 +1,3 @@
 packages:
-  - 'packages/*' # Adjust based on your folder structure
-  - 'apps/*' # Include the directory for `@aspen/eslint-config`
+  - "packages/*"
+  - "apps/*"
