@@ -1,20 +1,37 @@
 {
-  "name": "component-library",
+  "name": "@aspen/component-library",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/component-library.js",
+  "module": "./dist/component-library.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/component-library.js",
+      "types": "./dist/main.d.ts"
+    },
+    "./css": "./dist/main.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.3"
+  },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.474.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7"
   },
@@ -28,8 +45,9 @@
     "autoprefixer": "^10.4.20",
     "globals": "^15.14.0",
     "postcss": "^8.5.1",
-    "tailwindcss": "^4.0.3",
     "typescript": "~5.6.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.5.0",
+    "vite-plugin-lib-inject-css": "^2.2.1"
   }
 }
