@@ -1,13 +1,13 @@
 import { Button, ButtonProps } from "@/components/button/_button";
 
-interface PrimaryButtonProps extends Omit<ButtonProps, "variant"> {
+interface GhostButtonProps extends Omit<ButtonProps, "variant"> {
   children: React.ReactNode;
 }
 
-export function PrimaryButton(props: PrimaryButtonProps) {
+export function GhostButton(props: GhostButtonProps) {
   const { children, ...rest } = props;
   return (
-    <Button variant="primary" {...rest}>
+    <Button variant="ghost" {...rest}>
       {children}
     </Button>
   );

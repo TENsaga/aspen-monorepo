@@ -1,13 +1,13 @@
 import { Button, ButtonProps } from "@/components/button/_button";
 
-interface PrimaryButtonProps extends Omit<ButtonProps, "variant"> {
+interface DangerButtonProps extends Omit<ButtonProps, "variant"> {
   children: React.ReactNode;
 }
 
-export function PrimaryButton(props: PrimaryButtonProps) {
+export function DangerButton(props: DangerButtonProps) {
   const { children, ...rest } = props;
   return (
-    <Button variant="primary" {...rest}>
+    <Button variant="destructive" {...rest}>
       {children}
     </Button>
   );

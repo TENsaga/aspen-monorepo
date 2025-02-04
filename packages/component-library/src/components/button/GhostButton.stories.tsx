@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { CancelButton } from "./CancelButton";
+import { GhostButton } from "./GhostButton";
 
-const meta: Meta<typeof CancelButton> = {
+const meta: Meta<typeof GhostButton> = {
   title: "Components/Button",
-  component: CancelButton,
+  component: GhostButton,
   parameters: {
     layout: "centered",
   },
@@ -17,7 +17,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Cancel: Story = {
+export const Ghost: Story = {
   args: {
     children: "Button",
   },
