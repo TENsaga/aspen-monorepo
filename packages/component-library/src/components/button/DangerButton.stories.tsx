@@ -20,5 +20,6 @@ type Story = StoryObj<typeof meta>;
 export const Danger: Story = {
   args: {
     children: 'Button',
+    testID: 'danger',
   },
 };

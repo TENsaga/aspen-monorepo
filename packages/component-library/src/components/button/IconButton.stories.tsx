@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Button } from './_button';
+import { ChevronRight } from 'lucide-react';
+import { IconButton } from './IconButton';
 
-const meta: Meta<typeof Button> = {
+const meta: Meta<typeof IconButton> = {
   title: 'Components/Button',
-  component: Button,
+  component: IconButton,
   parameters: {
     layout: 'centered',
   },
@@ -17,8 +18,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Icon: Story = {
   args: {
-    children: 'Button',
+    children: <ChevronRight />,
+    testID: 'icon',
   },
 };
