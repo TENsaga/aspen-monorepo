@@ -1,5 +1,4 @@
-// Import styles of packages that you've installed.
-// All packages except `@mantine/hooks` require styles imports
+import { withThemeByClassName } from "@storybook/addon-themes";
 import "../src/index.css";
 
 import type { Preview } from "@storybook/react";
@@ -7,7 +6,9 @@ import type { Preview } from "@storybook/react";
 const preview: Preview = {
   tags: ["autodocs"],
   parameters: {
-    // actions: { argTypesRegex: '^on[A-Z].*' },
+    backgrounds: {
+      disable: true, // Prevent default backgrounds from interfering
+    },
     controls: {
       expanded: true,
       matchers: {
@@ -16,6 +17,15 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: "light",
+        dark: "dark bg-gray-950",
+      },
+      defaultTheme: "light",
+    }),
+  ],
 };
 
 export default preview;
