@@ -1,0 +1,11 @@
+@tailwind utilities;
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}

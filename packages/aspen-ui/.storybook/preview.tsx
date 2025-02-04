@@ -1,5 +1,3 @@
-// Import styles of packages that you've installed.
-// All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
 
 import { MantineProvider } from '@mantine/core';
@@ -13,17 +11,6 @@ export const decorators = [
     </MantineProvider>
   ),
 ];
-
-// export const parameters = {
-//   actions: { argTypesRegex: '^on[A-Z].*' },
-//   controls: {
-//     expanded: true, // Adds the description and default columns
-//     matchers: {
-//       color: /(background|color)$/i,
-//       date: /Date$/,
-//     },
-//   },
-// };
 
 const preview: Preview = {
   tags: ['autodocs'],
