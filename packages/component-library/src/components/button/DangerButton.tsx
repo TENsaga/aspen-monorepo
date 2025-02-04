@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@/components/button/_button';
+import { _Button, ButtonProps } from '@/components/button/_button';
 
 interface DangerButtonProps extends Omit<ButtonProps, 'variant'> {
   children: React.ReactNode;
@@ -7,8 +7,8 @@ interface DangerButtonProps extends Omit<ButtonProps, 'variant'> {
 export function DangerButton(props: DangerButtonProps) {
   const { children, ...rest } = props;
   return (
-    <Button variant="destructive" {...rest}>
+    <_Button variant="destructive" {...rest}>
       {children}
-    </Button>
+    </_Button>
   );
 }

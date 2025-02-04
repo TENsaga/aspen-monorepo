@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@/components/button/_button';
+import { _Button, ButtonProps } from '@/components/button/_button';
 
 interface GhostButtonProps extends Omit<ButtonProps, 'variant'> {
   children: React.ReactNode;
@@ -7,8 +7,8 @@ interface GhostButtonProps extends Omit<ButtonProps, 'variant'> {
 export function GhostButton(props: GhostButtonProps) {
   const { children, ...rest } = props;
   return (
-    <Button variant="ghost" {...rest}>
+    <_Button variant="ghost" {...rest}>
       {children}
-    </Button>
+    </_Button>
   );
 }

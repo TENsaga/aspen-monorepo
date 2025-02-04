@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@/components/button/_button';
+import { _Button, ButtonProps } from '@/components/button/_button';
 
 interface IconButtonProps extends Omit<ButtonProps, 'variant' | 'size'> {
   children: React.ReactNode;
@@ -7,8 +7,8 @@ interface IconButtonProps extends Omit<ButtonProps, 'variant' | 'size'> {
 export function IconButton(props: IconButtonProps) {
   const { children, ...rest } = props;
   return (
-    <Button variant="outline" size="icon" {...rest}>
+    <_Button variant="outline" size="icon" {...rest}>
       {children}
-    </Button>
+    </_Button>
   );
 }

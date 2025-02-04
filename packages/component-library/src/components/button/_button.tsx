@@ -47,7 +47,7 @@ export interface ButtonProps
   leftIcon?: React.ReactNode;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const _Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, testID, leftIcon, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
     const formattedTestID = `${testID.toLowerCase()}-button`;
@@ -65,6 +65,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
-Button.displayName = 'Button';
+_Button.displayName = 'Button';
 
-export { Button, buttonVariants };
+export { _Button, buttonVariants };
