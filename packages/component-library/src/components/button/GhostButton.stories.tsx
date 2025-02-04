@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { GhostButton } from "./GhostButton";
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import { GhostButton } from './GhostButton';
 
 const meta: Meta<typeof GhostButton> = {
-  title: "Components/Button",
+  title: 'Components/Button',
   component: GhostButton,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
   args: {
     onClick: fn(),
@@ -19,6 +19,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Ghost: Story = {
   args: {
-    children: "Button",
+    children: 'Button',
   },
 };

@@ -1,6 +1,6 @@
-import { Button, ButtonProps } from "@/components/button/_button";
+import { Button, ButtonProps } from '@/components/button/_button';
 
-interface PrimaryButtonProps extends Omit<ButtonProps, "variant"> {
+interface PrimaryButtonProps extends Omit<ButtonProps, 'variant'> {
   children: React.ReactNode;
 }
 

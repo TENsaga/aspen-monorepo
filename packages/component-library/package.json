@@ -19,7 +19,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint 'src/**'",
+    "lint:fix": "eslint 'src/**' --fix",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -54,6 +55,7 @@
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "eslint": "~9.19.0",
     "globals": "^15.14.0",
     "postcss": "^8.5.1",
     "react": "^18.3.1",
@@ -65,5 +67,6 @@
     "vite-plugin-dts": "^4.5.0",
     "vite-plugin-lib-inject-css": "^2.2.1",
     "vite-tsconfig-paths": "^5.1.4"
-  }
+  },
+  "prettier": "@aspen/eslint-config/.prettierrc.json"
 }
